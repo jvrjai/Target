@@ -2794,6 +2794,12 @@ showShortDetailsDiv = function(_selectedHotelRowData, _detailsDiv){
     }
 }
 
+setResultDivValue = function(param){
+    // Now "index" is used instead of "param". 
+    // It is present in argument to keep the signature correct as the calling function passes an argument which called function doesn't expect.
+    resultDiv = 'resultDiv_' + index;
+    enableSearchHotelDiv();
+}
 hideShortDetailsDiv = function(_detailsParentDiv, _detailsDiv){
     var sShortDetailDiv = $("SShortDetail");
     if (isPal && checkTravelType()) {
